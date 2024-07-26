@@ -22,13 +22,6 @@ def get_squares_v2(seq: Iterator[int]):
     return squares
 
 
-# def get_squares_v3(seq: Iterator[int]):
-#     for number in seq:
-#         if (number & (number - 1)) == 0:  # Проверка, является ли число степенью двойки
-#             yield number << 1  # Квадрат числа как сдвиг влево
-#         else:
-#             yield number ** 2 # Обычное возведение в квадрат
-
 def get_squares_v3(seq: Iterator[int]):
     for number in seq:
         yield np.square(number, number)
